@@ -1,0 +1,136 @@
+@mixin zIndex() {
+    &1n {
+        z-index: -1 !important;
+    }
+    &0 {
+        z-index: 0 !important;
+    }
+    &1 {
+        z-index: 1 !important;
+    }
+    &2 {
+        z-index: 2 !important;
+    }
+  }
+  
+  //////////////// margin and padding ////////////////
+  
+  $max: 60;
+  $offset: 1;
+  $unit: 'px';
+  list {
+    &__ {
+      &item {
+        list-style-type: none;
+      }
+    }
+  }
+  @mixin list-loop($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} { 
+      #{$styleName}: #{$i + $unit} !important;
+    }
+    $i: $i + $offset;
+  }
+  }
+  
+  @include list-loop('.p-', 'padding');
+  @include list-loop('.pl-', 'padding-left');
+  @include list-loop('.pr-', 'padding-right');
+  @include list-loop('.pt-', 'padding-top');
+  @include list-loop('.pb-', 'padding-bottom');
+  
+  @include list-loop('.m-', 'margin-left');
+  @include list-loop('.ml-', 'margin-left');
+  @include list-loop('.mr-', 'margin-right');
+  @include list-loop('.mt-', 'margin-top');
+  @include list-loop('.mb-', 'margin-bottom');
+  
+  @media (min-width: 575px) {
+    @include list-loop('.p-sm-', 'padding');
+    @include list-loop('.pl-sm-', 'padding-left');
+    @include list-loop('.pr-sm-', 'padding-right');
+    @include list-loop('.pt-sm-', 'padding-top');
+    @include list-loop('.pb-sm-', 'padding-bottom'); 
+  
+    @include list-loop('.m-sm-', 'margin');
+    @include list-loop('.ml-sm-', 'margin-left');
+    @include list-loop('.mr-sm-', 'margin-right');
+    @include list-loop('.mt-sm-', 'margin-top');
+    @include list-loop('.mb-sm-', 'margin-bottom');
+  }
+  
+  
+  @media (min-width: 768px) {
+    @include list-loop('.p-md-', 'padding');
+    @include list-loop('.pl-md-', 'padding-left');
+    @include list-loop('.pr-md-', 'padding-right');
+    @include list-loop('.pt-md-', 'padding-top');
+    @include list-loop('.pb-md-', 'padding-bottom'); 
+  
+    @include list-loop('.m-md-', 'margin');
+    @include list-loop('.ml-md-', 'margin-left');
+    @include list-loop('.mr-md-', 'margin-right');
+    @include list-loop('.mt-md-', 'margin-top');
+    @include list-loop('.mb-md-', 'margin-bottom');
+  }
+  
+  @media (min-width: 992px) {
+    @include list-loop('.p-lg-', 'padding');
+    @include list-loop('.pl-lg-', 'padding-left');
+    @include list-loop('.pr-lg-', 'padding-right');
+    @include list-loop('.pt-lg-', 'padding-top');
+    @include list-loop('.pb-lg-', 'padding-bottom'); 
+  
+    @include list-loop('.m-ld-', 'margin');
+    @include list-loop('.ml-lg-', 'margin-left');
+    @include list-loop('.mr-lg-', 'margin-right');
+    @include list-loop('.mt-lg-', 'margin-top');
+    @include list-loop('.mb-lg-', 'margin-bottom');
+  }
+  
+  @media (min-width: 1200px) {
+    @include list-loop('.p-xl-', 'padding');
+    @include list-loop('.pl-xl-', 'padding-left');
+    @include list-loop('.pr-xl-', 'padding-right');
+    @include list-loop('.pt-xl-', 'padding-top');
+    @include list-loop('.pb-xl-', 'padding-bottom');  
+  
+    @include list-loop('.m-xl-', 'margin');
+    @include list-loop('.ml-xl-', 'margin-left');
+    @include list-loop('.mr-xl-', 'margin-right');
+    @include list-loop('.mt-xl-', 'margin-top');
+    @include list-loop('.mb-xl-', 'margin-bottom');
+  }
+  
+  
+  @mixin list-spacing($className, $styleName, $secondStyleName) {
+    $i: 0;
+    @while $i <= $max {
+      #{$className + $i} { 
+        #{$styleName}: #{$i + $unit} !important;
+        #{$secondStyleName}: #{$i + $unit} !important;
+      }
+      $i: $i + $offset;
+    }
+  }
+  
+  @include list-spacing('.px-', 'padding-left', 'padding-right');
+  @include list-spacing('.py-', 'padding-top', 'padding-bottom');
+  @include list-spacing('.mx-', 'margin-left', 'margin-right');
+  @include list-spacing('.my-', 'margin-top', 'margin-bottom');
+  
+  @media (min-width: 1400px) {
+    @include list-spacing('.px-xxl-', 'padding-left', 'padding-right');
+    @include list-spacing('.py-xxl-', 'padding-top', 'padding-bottom');
+    @include list-spacing('.mx-xxl-', 'margin-left', 'margin-right');
+    @include list-spacing('.my-xxl-', 'margin-top', 'margin-bottom');
+  }
+  
+  //////////////// font-size with line-height ////////////////
+  
+  @mixin fontSize($size) {
+     font-size: $size;
+     line-height: calc(#{$size} + var(--line-height));
+  }

@@ -1,0 +1,86 @@
+$app: ".to";
+
+// import font family - montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// import font family - DM sans
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//import font family roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html, body {
+  font-size: var(--fs-para);
+  font-family: var(--ff-roboto);
+  font-weight: var(--font-light);
+  background-color: #fdfdfd;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+:root {
+
+  // gap 
+  --gap-max: 50px;
+  --gap-min: 10px;
+
+  //Line height
+  --line-height: 8px;
+
+  //Font family
+  --ff-montserrat: 'Montserrat', sans-serif;
+  --ff-roboto: 'Roboto', sans-serif;
+  --ff-dm-sans: 'DM Sans', sans-serif;
+
+  //Font weights
+  --font-thin: 100;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  // Colors
+  --color-primary: #EB0A1E;
+  --color-secondary: #000000;
+  --color-ternary: #F8F8F8;
+  --color-gray-500: #e6e6e6;
+  --color-gray-700: #7A7A7A;
+  --text-color: #181818;
+  --color-input-error: #e68e04;
+  --color-input: rgba(18, 18, 18, 0.5);
+  --color-danger: #f65959;
+  --color-success: #1D8602BF;
+
+
+}
+
+:root {
+  --fs-title            :  32px; // 40px
+  --fs-banner           :  38px; //48px
+  --fs-section-title    :  22px; //30px
+  --fs-element-title    :  17px;  //24px
+  --fs-para             :  15px;  //22px
+  --fs-button           :  17px; //24px
+  --fs-card-title       :  22px; // 30px
+  --fs-card-title-small :  17px; // 24px
+  --fs-card-price       :  22px; //30px
+  --fs-text             :  13px; // 18px
+  --fs-form-subtitle    :  22px; //30px
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --fs-title            :  36px; // 40px
+    --fs-banner           :  42px; //48px
+    --fs-section-title    :  26px; //30px
+    --fs-element-title    :  20px;  //24ps
+    --fs-para             :  18px;  //22px
+    --fs-button           :  20px; //24px
+    --fs-card-title       :  26px; // 30px
+    --fs-card-title-small :  20px; // 24px
+    --fs-card-price       :  26px; //30px
+    --fs-text             :  16px; // 18px
+  }
+}

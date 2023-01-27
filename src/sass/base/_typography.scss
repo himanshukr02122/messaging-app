@@ -1,0 +1,210 @@
+/* ===========================================
+****************** GLOBAL ********************
+=========================================== */
+#{$app}- {
+    &title {
+      @include fontSize(var(--fs-title));
+      font-weight: var(--font-bold);
+      font-family: var(--ff-dm-sans);
+      color: var(--color-gray-500);
+      padding: 0;
+  
+      &-- {
+        &black {
+          color: var(--color-secondary)
+        }
+        &montserrat {
+          font-family: var(--ff-montserrat);
+        }
+      }
+  
+      &__{
+        &wrap {
+          border-bottom: 1px solid var(--color-primary);
+          padding-bottom: 15px;
+        }
+        &banner {
+          @include fontSize(var(--fs-banner));
+          font-weight: var(--font-bold);
+          font-family: var(--ff-dm-sans);
+          color: var(--color-ternary);
+        }
+        &section {
+          position: relative;
+          @include fontSize(var(--fs-section-title));
+          font-weight: var(--font-bold);
+          font-family: var(--ff-dm-sans);
+          overflow: hidden;
+          span {
+            padding-right: 16px;
+            // display: inline-block;
+          }
+          &:after {
+            position: absolute;
+            bottom: 22%;
+            vertical-align: bottom;
+            content: "";
+            width: 100%;
+            height: 1px;
+            z-index: 0;
+            background-color: var(--color-primary);
+          }
+  
+          &- {
+            &typeB {
+              &:after {
+                display: none
+              }
+              & span {
+                padding: 0 !important;
+              }
+            }
+          }
+        }
+        &card {
+          position: relative;
+          @include fontSize(var(--fs-card-title));
+          font-weight: var(--font-bold);
+          font-family: var(--ff-dm-sans);
+          color: var(--text-color);
+          padding: 10px 0;
+          width: 100%;
+          &- {
+            &small {
+              @include fontSize(var(--fs-card-title-small))
+            }
+          }
+  
+          &-- {
+            &L {
+              @include fontSize(calc(var(--fs-card-title) + 4px));
+            }
+          }
+  
+        &- {
+          &price {
+            @include fontSize(var(--fs-card-price));
+            font-weight: var(--font-bold);
+          }
+        }
+        }
+        &element {
+          @include fontSize(var(--fs-element-title));
+          font-weight: var(--font-bold);
+          // color: var(--color-ternary);
+          &-- {
+            &semi-montserrat {
+              font-weight: var(--font-semibold);
+              font-family: var(--ff-montserrat);
+            }
+          }
+    
+          &-- {
+            &black {
+              color: black;
+            }
+            &white {
+              color: var(--color-ternary);
+            }
+          }
+        }
+        &subsection {
+          @include fontSize(var(--fs-sub-section-title));
+          font-weight: var(--font-semibold);
+        }
+        &modal {
+          @include fontSize(var(--fs-section-title));
+          font-weight: var(--font-bold);
+          font-family: var(--ff-dm-sans);
+  
+        }
+      }
+    }
+    &breadcrumbs {
+      @include fontSize(var(--fs-para));
+      font-weight: var(--font-normal);
+      color: var(--color-gray-500);
+      .a-dark {
+        color: var(--text-color) !important;
+        &:hover {
+          color: rgba($color: #000000, $alpha: 0.8) !important;
+        }
+      }
+      .a-light {
+        color: var(--color-gray-500);
+        &:hover {
+          color: var(--color-gray-500);
+          opacity: 0.8;
+        }
+      }
+      @media screen and (min-height: 991px) {
+          margin-left: -10px;
+      }
+    }
+    &dot {
+      margin-left: 5px;
+      display: inline-block;
+      padding: 4px;
+      background-color: var(--color-primary);
+      &__ {
+        &sm {
+          width: 6px;
+          height: 6px;
+          margin-left: 4px;
+          display: inline-block;
+          // padding: 3px;
+          background-color: var(--color-primary);
+        }
+      }
+    }
+    &para {
+      @include fontSize(var(--fs-para));
+      color: var(--color-gray-500);
+  
+      &-- {
+        &black {
+          color: var(--color-secondary)
+        }
+      }
+    }
+    &text {
+      color: var(--text-color);
+      @include fontSize(var(--fs-text));
+      &-- {
+        &dark {
+          color: var(--text-color);
+          &:hover {
+            color: var(--text-color);
+          }
+        }
+        &gray {
+          color: #7A7A7A;
+        }
+        &colourb4 {
+          color: #B4B4B4;
+        }
+        &primary {
+          color: var(--color-primary);
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+        &ternary {
+          color: var(--color-ternary);
+        }
+        &e6 {
+          color: var(--color-gray-500);
+        }
+      }
+      @include fontSize(var(--fs-text));
+      &-- {
+        &medium {
+          font-weight: var(--font-medium);
+        }
+      }
+    }
+    &price {
+      @include fontSize(var(--fs-price));
+      font-weight: var(--font-bold);
+    }
+  }
