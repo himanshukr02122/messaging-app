@@ -3,6 +3,7 @@ import Footer from './Footer'
 import Header from './Header'
 
 const Layout = (props) => {
+  console.log(props.children, 'dxa');
   return (
     <>
         <Header />
